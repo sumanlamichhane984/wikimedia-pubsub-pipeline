@@ -66,7 +66,7 @@ stream        stream         stream
 - 81,748+ rows of real Wikipedia human edit events
 - Fields: `event_id`, `title`, `user`, `byte_delta`, `is_minor`, `comment`, `event_timestamp` and more
 
-### `wiki_bot_stream` — Bot Edits  
+### `wiki_bot_stream` — Bot Edits
 - 5,952+ rows of bot edit events
 - Same schema as human edits — enables bot vs human comparison
 
@@ -82,15 +82,15 @@ stream        stream         stream
 ```
 wikimedia-pubsub-pipeline/
 ├── publisher/
-│   └── wikimedia_publisher.py    # Main publisher script
+│   └── wikimedia_publisher.py     # Main publisher script
 ├── schema/
-│   ├── wiki_edits_schema.json    # BigQuery schema for human edits
+│   ├── wiki_edits_schema.json     # BigQuery schema for human edits
 │   ├── wiki_bot_edits_schema.json # BigQuery schema for bot edits
-│   └── wiki_dlq_schema.json      # BigQuery schema for DLQ
+│   └── wiki_dlq_schema.json       # BigQuery schema for DLQ
 ├── sql/
-│   └── analytics.sql             # 10 analytics queries
+│   └── analytics.sql              # 10 analytics queries
 ├── docs/
-│   └── *.png                     # Architecture and demo screenshots
+│   └── *.png                      # Demo screenshots
 ├── requirements.txt
 └── README.md
 ```
@@ -98,6 +98,9 @@ wikimedia-pubsub-pipeline/
 ---
 
 ## Screenshots
+
+### Publisher Running — Real-time Messages
+![Publisher](docs/publish_messages.png)
 
 ### Row Counts — All 3 Tables
 ![Row Counts](docs/Total_as_count.png)
@@ -107,9 +110,6 @@ wikimedia-pubsub-pipeline/
 
 ### Largest Edits — Vandalism Detection
 ![Vandalism Detection](docs/largest%20edits%20.png)
-
-### Publisher Running — Real-time Messages
-![Publisher](docs/publish_messages.png)
 
 ---
 
